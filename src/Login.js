@@ -15,7 +15,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const loginUser = () => {
     
-    Axios.post('http://localhost:3001/login', {
+    Axios.post('http://https://magenic-exam-react.herokuapp.com/login', {
       username, 
       password, 
     }).then((response) => {

@@ -25,7 +25,7 @@ function RegisterDiscounted() {
     var expiryDate = new Date(currentDate).toISOString().slice(0, 19).replace('T', ' ');
     var cardLoad = 500;
     
-    Axios.post('http://localhost:3001/register', {
+    Axios.post('http://https://magenic-exam-react.herokuapp.com/register', {
       username, 
       password, 
       expiryDate,

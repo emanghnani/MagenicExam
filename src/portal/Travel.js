@@ -52,7 +52,7 @@ function Travel() {
         let expiry = new Date(currentDate).toISOString().slice(0, 19).replace('T', ' ');
         setExpiryDate(expiry);
         console.log(dailyTravel)
-        Axios.put("http://localhost:3001/update", {cardLoad : newLoad, lastTravel: lastTravelUpdate, expiryDate: expiry, dailyTravels: dailyTravel, username: userData.username }).then
+        Axios.put("http://https://magenic-exam-react.herokuapp.com/update", {cardLoad : newLoad, lastTravel: lastTravelUpdate, expiryDate: expiry, dailyTravels: dailyTravel, username: userData.username }).then
         ((response) => {
         }
         );

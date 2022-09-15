@@ -26,7 +26,7 @@ function Reload() {
             setCurrentLoad(currentLoad + reloadValue)
             setChange(reloadValue - amountToLoad)
 
-            Axios.put("http://localhost:3001/reloadCard", {cardLoad : updatedLoad, username: userData.username}).then
+            Axios.put("http://https://magenic-exam-react.herokuapp.com/reloadCard", {cardLoad : updatedLoad, username: userData.username}).then
         ((response) => {
         }
         );

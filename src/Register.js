@@ -27,7 +27,7 @@ function Register() {
     
     var cardLoad = 100;
     
-    Axios.post('http://localhost:3001/register', {
+    Axios.post('http://https://magenic-exam-react.herokuapp.com/register', {
       username, 
       password, 
       expiryDate,
