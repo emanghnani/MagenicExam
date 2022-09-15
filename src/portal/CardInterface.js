@@ -18,7 +18,7 @@ function CardInterface() {
 
     useEffect(() => {
        
-        Axios.get("http://https://magenic-exam-react.herokuapp.com/login").then((response) => {{
+        Axios.get("https://magenic-exam-react.herokuapp.com/login").then((response) => {{
           console.log(response.data.loggedIn)
             if(response.data.loggedIn == true)
             {
