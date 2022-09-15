@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom' 
+import Register from './Register';
+import Home from './Home';
+import RegisterDiscounted from "./RegisterDiscounted";
+import Login from "./Login";
+import CardInterface from "./portal/CardInterface";
+import Reload from "./portal/Reload";
+import Travel from "./portal/Travel";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path = "/" element = {<Home />} />
+                <Route path = "/register" element ={<Register />} />
+                <Route path = "/registerDiscounted" element ={<RegisterDiscounted />} />
+                <Route path = "/login" element ={<Login />} />
+                <Route path = "/cardInterface" element ={<CardInterface />} >
+                    <Route path = "travel" element ={<Travel />} />
+                    <Route path = "reload" element ={<Reload />} />
+                </Route>
+                </Routes>
+         </Router>
+        );
+
 }
 
 export default App;
